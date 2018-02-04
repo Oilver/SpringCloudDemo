@@ -1,0 +1,13 @@
+server:
+  port: 8763
+
+eureka:
+  instance:
+    hostname: peer3
+  client:
+    registerWithEureka: false  #表明这个是server
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+spring:
+  profiles: peer3
